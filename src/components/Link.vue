@@ -2,17 +2,17 @@
    <div class="links">
       <ul>
         <li>
-          <a href="#">
+          <a href="https://twitter.com/cloudynowhere">
             <img src="@/assets/twitter.svg" alt="" />
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="https://discord.gg/cloudynowhere">
             <img src="@/assets/dsq.svg" alt="" />
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="https://opensea.io/collection/cloudy-nowhere-friends">
             <img src="@/assets/os.svg" alt="" />
           </a>
         </li>
@@ -72,8 +72,8 @@ ul li a img {
 }
 }
 @media(max-width:425px){
-.links ul {
-  margin-top: 15px;
+  .links ul {
+    margin-top: 3px;
   gap: 15px;
 }
 ul li a img {
@@ -85,7 +85,6 @@ ul li a img {
 @media(max-width:375px){
 
 .links ul {
-  margin-top: 15px;
   gap: 15px;
 }
 ul li a img {

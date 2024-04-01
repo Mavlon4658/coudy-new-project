@@ -249,12 +249,12 @@ export default {
     font-size: 10px;
   }
   .ducg {
-    top: -3%;
-    width: 35px;
+    top: 1%;
+    width: 31px;
   }
   .cloud3 {
-    top: 10%;
-    width: 70px;
+    top: 11%;
+    width: 65px;
   }
 }
 @media (max-width: 375px) {
@@ -271,9 +271,9 @@ export default {
 
   .ducg {
     position: absolute;
-    top: 6%;
+    top: 7%;
     left: 10%;
-    width: 30px;
+    width: 28px;
   }
   .cloud3 {
     position: absolute;

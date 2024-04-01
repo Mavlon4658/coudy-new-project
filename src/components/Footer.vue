@@ -92,6 +92,9 @@ export default {
   }
 }
 @media (max-width: 400px) {
+  .footer_top{
+    margin-top: 0;
+  }
   .footer_top_join {
     position: inherit;
     max-width: 130px;
