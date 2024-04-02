@@ -5,18 +5,29 @@
       <img src="@/assets/home/logo.svg" alt="" />
     </div>
     <Link />,
-      <button><a target="_blank" href="https://discord.gg/cloudynowhere">mint</a></button>
+      <button @click="modal = true">
+        <img src="@/assets/home/mint.svg" alt="">
+      </button>
 
     <img class="cloud1" src="@/assets/cloud1.svg" alt="" />
+
   </div>
+  <main-modal v-if="modal" v-model:value="modal"></main-modal>
 </template>
 
 <script>
 import 'animate.css';
 import Link from "./Link.vue";
+import MainModal from "./MainModal.vue";
 export default {
+  data () {
+    return {
+      modal: false
+    }
+  },
   components: {
     Link,
+    MainModal,
   },
   
 };
@@ -27,7 +38,7 @@ export default {
 /* button */
 button{
   position: absolute;
-  border: 6px solid #C7FE06;
+  border: 0;
   cursor: pointer;
   padding: 5px 20px;
   border-radius: 15px;
@@ -35,12 +46,7 @@ button{
   top: -50px;
   transform: rotate(-25deg);
   font-family: Arial, Helvetica, sans-serif;
-}
-button a{
-  display: block;
-  font-size: 50px;
-  font-weight: 900;
-  color: #000;
+  background: transparent;
 }
 .container {
   position: relative;
@@ -135,15 +141,10 @@ img {
   }
   /* button */
 button{
-  border: 6px solid #C7FE06;
   cursor: pointer;
   padding: 5px 20px;
   right: 20px;
   top: -20px;
-}
-button a{
-  font-size: 45px;
-  font-weight: 900;
 }
 }
 @media (max-width: 768px) {
@@ -205,16 +206,20 @@ button a{
     bottom: 17%;
   }
   button{
-    border: 5px solid #C7FE06;
     border-radius: 8px;
     cursor: pointer;
     padding: 0 8px;
     right: 10px;
-  top: -20px;
+  top: -26px;
 }
-button a{
-  font-size: 30px;
+
 }
+@media (max-width: 500px){
+
+
+  button img {
+    width: 90px;
+} 
 }
 @media (max-width: 425px) {
   .moon {
@@ -244,6 +249,15 @@ button a{
     right: 4%;
     bottom: 17%;
   }
+  button{
+    right: 5px;
+  top: -30px;
+}
+
+  button img {
+    width: 90px;
+}
+  
 }
 @media (max-width: 375px) {
   .moon {
@@ -274,14 +288,12 @@ button a{
     bottom: 20%;
   }
   button{
-  border: 4px solid #C7FE06;
-  cursor: pointer;
-  padding: 0 8px;
-  right: 10px;
+    right: 5px;
   top: -30px;
 }
-button a{
-  font-size: 22px;
+button img {
+    width: 76px;
 }
+
 }
 </style>
