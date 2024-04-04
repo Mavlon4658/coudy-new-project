@@ -33,12 +33,27 @@ export default {
     }
   },
   mounted() {
-    setTimeout(() => {
-      this.imgTransform();
-    }, 500);
-    setInterval(() => {
-      this.imgTransform();
-    }, 7000);
+    let  imgTransform =  async () => {
+      let containerWidth = await this.$refs.img_container.offsetWidth;
+      let imgWidth = await this.$refs.img.offsetWidth;
+      let trsX = await containerWidth - imgWidth;
+      console.log(imgWidth);
+      if (this.swp) {
+        this.$refs.img.style.left = `0`;
+      } else {
+        this.$refs.img.style.left = `${trsX}px`;
+      }
+      this.swp = !this.swp
+    }
+
+    $(document).ready(function () {
+      setTimeout(() => {
+        imgTransform();
+      }, 500);
+      setInterval(() => {
+        imgTransform();
+      }, 7000);
+    })
   },
   methods: {
     async imgTransform () {
