@@ -119,7 +119,7 @@ export default {
 .img_container {
   width: 100%;
   overflow: hidden;
-  border-bottom: 2px solid;
+  border-bottom: 6px solid;
   position: relative;
   height: 130px;
 }
@@ -157,7 +157,7 @@ export default {
 }
 
 marquee {
-  border-bottom: 4px solid;
+  border-bottom: 6px solid;
 }
 
 marquee img {
@@ -167,6 +167,18 @@ marquee img {
 
 marquee img:not(:last-child) {
   margin-left: 35px;
+}
+
+@media only screen and (max-width: 768px) {
+  .img img {
+    height: 90px;
+    transform: translateY(6px);
+  }
+
+  .img img:not(:last-child) {
+    margin-right: 25px;
+  }
+
 }
 
 </style>
