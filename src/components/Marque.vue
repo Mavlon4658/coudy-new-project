@@ -1,78 +1,25 @@
 <template>
   <div class="wrapper">
-    <marquee behavior="alternate" scrollamount="'6.5'">
-      <img src="@/assets/head/11.svg" alt="">
-      <img src="@/assets/head/22.svg" alt="">
-      <img src="@/assets/head/33.svg" alt="">
-      <img src="@/assets/head/44.svg" alt="">
-      <img src="@/assets/head/55.svg" alt="">
-      <img src="@/assets/head/66.svg" alt="">
-      <img src="@/assets/head/77.svg" alt="">
-      <img src="@/assets/head/ang.svg" alt="">
-      <img src="@/assets/head/clwn.svg" alt="">
-      <img src="@/assets/head/dnt.svg" alt="">
-      <img src="@/assets/head/hh.svg" alt="">
-      <img src="@/assets/head/horn.svg" alt="">
-      <img src="@/assets/head/ice.svg" alt="">
-      <img src="@/assets/head/mnr.svg" alt="">
-      <img src="@/assets/head/momo.svg" alt="">
-      <img src="@/assets/head/ooo.svg" alt="">
-      <img src="@/assets/head/zmb.svg" alt="">
-      <!-- <img src="@/assets/head/11.svg" alt="">
-      <img src="@/assets/head/22.svg" alt="">
-      <img src="@/assets/head/33.svg" alt="">
-      <img src="@/assets/head/44.svg" alt="">
-      <img src="@/assets/head/55.svg" alt="">
-      <img src="@/assets/head/66.svg" alt="">
-      <img src="@/assets/head/77.svg" alt="">
-      <img src="@/assets/head/ang.svg" alt="">
-      <img src="@/assets/head/clwn.svg" alt="">
-      <img src="@/assets/head/dnt.svg" alt="">
-      <img src="@/assets/head/hh.svg" alt="">
-      <img src="@/assets/head/horn.svg" alt="">
-      <img src="@/assets/head/ice.svg" alt="">
-      <img src="@/assets/head/mnr.svg" alt="">
-      <img src="@/assets/head/momo.svg" alt="">
-      <img src="@/assets/head/ooo.svg" alt="">
-      <img src="@/assets/head/zmb.svg" alt=""> -->
-    </marquee>
-
     <div class="img_container" ref="img_container">
       <div class="img" ref="img">
-        <img src="@/assets/head/11.svg" alt="">
-        <img src="@/assets/head/22.svg" alt="">
-        <img src="@/assets/head/33.svg" alt="">
-        <img src="@/assets/head/44.svg" alt="">
-        <img src="@/assets/head/55.svg" alt="">
-        <img src="@/assets/head/66.svg" alt="">
-        <img src="@/assets/head/77.svg" alt="">
-        <img src="@/assets/head/ang.svg" alt="">
-        <img src="@/assets/head/clwn.svg" alt="">
-        <img src="@/assets/head/dnt.svg" alt="">
-        <img src="@/assets/head/hh.svg" alt="">
-        <img src="@/assets/head/horn.svg" alt="">
-        <img src="@/assets/head/ice.svg" alt="">
-        <img src="@/assets/head/mnr.svg" alt="">
-        <img src="@/assets/head/momo.svg" alt="">
+        <img src="@/assets/heads/head1.png" alt="">
         <img src="@/assets/head/ooo.svg" alt="">
-        <img src="@/assets/head/zmb.svg" alt="">
-        <img src="@/assets/head/11.svg" alt="">
-        <img src="@/assets/head/22.svg" alt="">
         <img src="@/assets/head/33.svg" alt="">
-        <img src="@/assets/head/44.svg" alt="">
-        <img src="@/assets/head/55.svg" alt="">
-        <img src="@/assets/head/66.svg" alt="">
-        <img src="@/assets/head/77.svg" alt="">
-        <img src="@/assets/head/ang.svg" alt="">
-        <img src="@/assets/head/clwn.svg" alt="">
-        <img src="@/assets/head/dnt.svg" alt="">
-        <img src="@/assets/head/hh.svg" alt="">
-        <img src="@/assets/head/horn.svg" alt="">
-        <img src="@/assets/head/ice.svg" alt="">
-        <img src="@/assets/head/mnr.svg" alt="">
+        <img src="@/assets/head/11.svg" alt="">
         <img src="@/assets/head/momo.svg" alt="">
-        <img src="@/assets/head/ooo.svg" alt="">
+        <img src="@/assets/head/clwn.svg" alt="">
+        <img src="@/assets/head/ice.svg" alt="">
+        <img src="@/assets/head/77.svg" alt="">
+        <img src="@/assets/head/hh.svg" alt="">
+        <img src="@/assets/head/dnt.svg" alt="">
+        <img src="@/assets/head/ang.svg" alt="">
+        <img src="@/assets/head/mnr.svg" alt="">
+        <img src="@/assets/head/22.svg" alt="">
+        <img src="@/assets/head/44.svg" alt="">
+        <img src="@/assets/head/66.svg" alt="">
         <img src="@/assets/head/zmb.svg" alt="">
+        <img src="@/assets/head/55.svg" alt="">
+        <img src="@/assets/head/horn.svg" alt="">
       </div>
     </div>
   </div>
@@ -88,10 +35,10 @@ export default {
   mounted() {
     setTimeout(() => {
       this.imgTransform();
-    }, 1000);
+    }, 500);
     setInterval(() => {
       this.imgTransform();
-    }, 29000);
+    }, 7000);
   },
   methods: {
     async imgTransform () {
@@ -140,16 +87,19 @@ export default {
   top: 0;
   left: 0;
   display: flex;
+  /* flex-direction: column; */
   align-items: flex-end;
   width: auto;
   height: 130px;
-  transition: 29s linear all;
+  transition: 7s linear all;
   /* animation: imgAnimation 5s linear infinite; */
 }
 
 .img img {
   height: 130px;
   transform: translateY(10px);
+  /* width: auto;
+  object-fit: contain */
 }
 
 .img img:not(:last-child) {
