@@ -33,34 +33,22 @@ export default {
     }
   },
   mounted() {
-    let  imgTransform =  async () => {
-      let containerWidth = await this.$refs.img_container.offsetWidth;
-      let imgWidth = await this.$refs.img.offsetWidth;
-      let trsX = await containerWidth - imgWidth;
-      console.log(imgWidth);
-      if (this.swp) {
-        this.$refs.img.style.left = `0`;
-      } else {
-        this.$refs.img.style.left = `${trsX}px`;
+    let stclr = setInterval(() => {
+      if (this.$refs.img.offsetWidth > 2000) {
+        clearInterval(stclr);
+        this.imgTransform();
       }
-      this.swp = !this.swp
-    }
-
-    $(document).ready(function () {
-      setTimeout(() => {
-        imgTransform();
-      }, 500);
-      setInterval(() => {
-        imgTransform();
-      }, 7000);
-    })
+    }, 10);
+    setInterval(() => {
+      this.imgTransform();
+    }, 7000);
   },
   methods: {
     async imgTransform () {
       let containerWidth = await this.$refs.img_container.offsetWidth;
       let imgWidth = await this.$refs.img.offsetWidth;
       let trsX = await containerWidth - imgWidth;
-      console.log(imgWidth);
+      // console.log(imgWidth);
       if (this.swp) {
         this.$refs.img.style.left = `0`;
       } else {
