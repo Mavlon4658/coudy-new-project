@@ -86,10 +86,12 @@ export default {
     }
   },
   mounted() {
-    // this.imgTransform();
-    // setInterval(() => {
-    //   this.imgTransform();
-    // }, 5000);
+    setTimeout(() => {
+      this.imgTransform();
+    }, 1000);
+    setInterval(() => {
+      this.imgTransform();
+    }, 29000);
   },
   methods: {
     async imgTransform () {
@@ -98,9 +100,9 @@ export default {
       let trsX = await containerWidth - imgWidth;
       console.log(imgWidth);
       if (this.swp) {
-        this.$refs.img.style.transform = `translateX(0px)`;
+        this.$refs.img.style.left = `0`;
       } else {
-        this.$refs.img.style.transform = `translateX(${trsX}px)`;
+        this.$refs.img.style.left = `${trsX}px`;
       }
       this.swp = !this.swp
     }
@@ -122,7 +124,7 @@ export default {
   height: 130px;
 }
 
-@keyframes imgAnimation {
+/* @keyframes imgAnimation {
   0% {
     left: auto;
     right: 0;
@@ -131,7 +133,7 @@ export default {
     left: 0;
     right: auto;
   }
-}
+} */
 
 .img {
   position: absolute;
@@ -141,11 +143,13 @@ export default {
   align-items: flex-end;
   width: auto;
   height: 130px;
-  animation: imgAnimation 5s linear infinite;
+  transition: 29s linear all;
+  /* animation: imgAnimation 5s linear infinite; */
 }
 
 .img img {
   height: 130px;
+  transform: translateY(10px);
 }
 
 .img img:not(:last-child) {
