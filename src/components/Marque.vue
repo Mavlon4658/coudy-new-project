@@ -33,15 +33,18 @@ export default {
     }
   },
   mounted() {
-    let stclr = setInterval(() => {
-      if (this.$refs.img.offsetWidth > 2000) {
-        clearInterval(stclr);
-        this.imgTransform();
-      }
-    }, 10);
-    setInterval(() => {
+    // let stclr = setInterval(() => {
+    //   if (this.$refs.img.offsetWidth > 2000) {
+    //     clearInterval(stclr);
+    //   }
+    // }, 10);
+
+    setTimeout(() => {
       this.imgTransform();
-    }, 7000);
+      setInterval(() => {
+        this.imgTransform();
+      }, 7000);
+    }, 1500);
   },
   methods: {
     async imgTransform () {
