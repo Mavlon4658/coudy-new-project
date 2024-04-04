@@ -1,139 +1,168 @@
 <template>
-  <div>
-    <swiper
-      :spaceBetween="35"
-      :slides-per-view="'auto'"
-      :speed="2500"
-      :allow-touch-move="false"
-      :autoplay="{
-        delay: 0,
-        disableOnInteraction: false,
-        reverseDirection: swp
-      }"
-      :modules="modules"
-      @slideChangeTransitionEnd="e => handleSlideChange(e)"
-    >
-      <swiper-slide>
-        <img src="@/assets/heads/head1.png" alt="" />
-      </swiper-slide>
-      <swiper-slide>
-        <img src="@/assets/heads/head2.svg" alt="" />
-      </swiper-slide>
-      <swiper-slide>
-        <img src="@/assets/heads/head3.svg" alt="" />
-      </swiper-slide>
-      <swiper-slide>
-        <img src="@/assets/heads/head4.png" alt="" />
-      </swiper-slide>
-      <swiper-slide>
-        <img src="@/assets/heads/head5.png" alt="" />
-      </swiper-slide>
-      <swiper-slide>
-        <img src="@/assets/heads/head7.png" alt="" />
-      </swiper-slide>
-      <swiper-slide>
-        <img src="@/assets/heads/head8.png" alt="" />
-      </swiper-slide>
-      <swiper-slide>
-        <img src="@/assets/heads/head9.svg" alt="" />
-      </swiper-slide>
-      <swiper-slide>
-        <img src="@/assets/heads/head10.png" alt="" />
-      </swiper-slide>
-      <swiper-slide>
-        <img src="@/assets/heads/head11.png" alt="" />
-      </swiper-slide>
-      <swiper-slide>
-        <img src="@/assets/heads/head12.png" alt="" />
-      </swiper-slide>
-      <swiper-slide>
-        <img src="@/assets/heads/head13.svg" alt="" />
-      </swiper-slide>
-      <swiper-slide>
-        <img src="@/assets/heads/head14.png" alt="" />
-      </swiper-slide>
-      <swiper-slide>
-        <img src="@/assets/heads/head15.svg" alt="" />
-      </swiper-slide>
-      <swiper-slide>
-        <img src="@/assets/heads/head16.png" alt="" />
-      </swiper-slide>
-      <swiper-slide>
-        <img src="@/assets/heads/head17.png" alt="" />
-      </swiper-slide>
-    </swiper>
-    <div class="animation__img_wrap" ref="animationImgWrap">
-      <div class="animation_img" ref="animationImg">
+  <div class="wrapper">
+    <marquee behavior="alternate" scrollamount="'6.5'">
+      <img src="@/assets/head/11.svg" alt="">
+      <img src="@/assets/head/22.svg" alt="">
+      <img src="@/assets/head/33.svg" alt="">
+      <img src="@/assets/head/44.svg" alt="">
+      <img src="@/assets/head/55.svg" alt="">
+      <img src="@/assets/head/66.svg" alt="">
+      <img src="@/assets/head/77.svg" alt="">
+      <img src="@/assets/head/ang.svg" alt="">
+      <img src="@/assets/head/clwn.svg" alt="">
+      <img src="@/assets/head/dnt.svg" alt="">
+      <img src="@/assets/head/hh.svg" alt="">
+      <img src="@/assets/head/horn.svg" alt="">
+      <img src="@/assets/head/ice.svg" alt="">
+      <img src="@/assets/head/mnr.svg" alt="">
+      <img src="@/assets/head/momo.svg" alt="">
+      <img src="@/assets/head/ooo.svg" alt="">
+      <img src="@/assets/head/zmb.svg" alt="">
+      <!-- <img src="@/assets/head/11.svg" alt="">
+      <img src="@/assets/head/22.svg" alt="">
+      <img src="@/assets/head/33.svg" alt="">
+      <img src="@/assets/head/44.svg" alt="">
+      <img src="@/assets/head/55.svg" alt="">
+      <img src="@/assets/head/66.svg" alt="">
+      <img src="@/assets/head/77.svg" alt="">
+      <img src="@/assets/head/ang.svg" alt="">
+      <img src="@/assets/head/clwn.svg" alt="">
+      <img src="@/assets/head/dnt.svg" alt="">
+      <img src="@/assets/head/hh.svg" alt="">
+      <img src="@/assets/head/horn.svg" alt="">
+      <img src="@/assets/head/ice.svg" alt="">
+      <img src="@/assets/head/mnr.svg" alt="">
+      <img src="@/assets/head/momo.svg" alt="">
+      <img src="@/assets/head/ooo.svg" alt="">
+      <img src="@/assets/head/zmb.svg" alt=""> -->
+    </marquee>
+
+    <div class="img_container" ref="img_container">
+      <div class="img" ref="img">
+        <img src="@/assets/head/11.svg" alt="">
+        <img src="@/assets/head/22.svg" alt="">
+        <img src="@/assets/head/33.svg" alt="">
+        <img src="@/assets/head/44.svg" alt="">
+        <img src="@/assets/head/55.svg" alt="">
+        <img src="@/assets/head/66.svg" alt="">
+        <img src="@/assets/head/77.svg" alt="">
+        <img src="@/assets/head/ang.svg" alt="">
+        <img src="@/assets/head/clwn.svg" alt="">
+        <img src="@/assets/head/dnt.svg" alt="">
+        <img src="@/assets/head/hh.svg" alt="">
+        <img src="@/assets/head/horn.svg" alt="">
+        <img src="@/assets/head/ice.svg" alt="">
+        <img src="@/assets/head/mnr.svg" alt="">
+        <img src="@/assets/head/momo.svg" alt="">
+        <img src="@/assets/head/ooo.svg" alt="">
+        <img src="@/assets/head/zmb.svg" alt="">
+        <img src="@/assets/head/11.svg" alt="">
+        <img src="@/assets/head/22.svg" alt="">
+        <img src="@/assets/head/33.svg" alt="">
+        <img src="@/assets/head/44.svg" alt="">
+        <img src="@/assets/head/55.svg" alt="">
+        <img src="@/assets/head/66.svg" alt="">
+        <img src="@/assets/head/77.svg" alt="">
+        <img src="@/assets/head/ang.svg" alt="">
+        <img src="@/assets/head/clwn.svg" alt="">
+        <img src="@/assets/head/dnt.svg" alt="">
+        <img src="@/assets/head/hh.svg" alt="">
+        <img src="@/assets/head/horn.svg" alt="">
+        <img src="@/assets/head/ice.svg" alt="">
+        <img src="@/assets/head/mnr.svg" alt="">
+        <img src="@/assets/head/momo.svg" alt="">
+        <img src="@/assets/head/ooo.svg" alt="">
+        <img src="@/assets/head/zmb.svg" alt="">
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import { Swiper, SwiperSlide } from 'swiper/vue';
-
-// Import Swiper styles
-import 'swiper/css';
-
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-
 export default {
-  components: {
-    Swiper,
-    SwiperSlide,
-  },
-  setup() {
-    return {
-      modules: [Autoplay, Navigation],
-    };
-  },
   data () {
     return {
       swp: false,
     }
   },
-  methods: {
-    handleSlideChange(swiper) {
-      if (swiper.isBeginning) {
-        swiper.autoplay.stop();
-      } else {
-        swiper.autoplay.start();
-      }
-      if (!swiper.isEnd) {
-        swiper.slideNext();
-      }
-    },
-  },
   mounted() {
+    // this.imgTransform();
+    // setInterval(() => {
+    //   this.imgTransform();
+    // }, 5000);
   },
+  methods: {
+    async imgTransform () {
+      let containerWidth = await this.$refs.img_container.offsetWidth;
+      let imgWidth = await this.$refs.img.offsetWidth;
+      let trsX = await containerWidth - imgWidth;
+      console.log(imgWidth);
+      if (this.swp) {
+        this.$refs.img.style.transform = `translateX(0px)`;
+      } else {
+        this.$refs.img.style.transform = `translateX(${trsX}px)`;
+      }
+      this.swp = !this.swp
+    }
+  }
 };
 </script>
 
 <style>
-.swiper {
-  border-bottom: 3px solid;
+.wrapper {
+  width: 100%;
+  overflow: hidden;
 }
 
-.swiper-wrapper {
-  transition-timing-function: linear;
-}
-
-.swiper-slide {
-  width: auto;
-}
-
-.swiper-slide img {
+.img_container {
+  width: 100%;
+  overflow: hidden;
+  border-bottom: 2px solid;
+  position: relative;
   height: 130px;
-  transform: translateY(15px);
-  /* margin-bottom: -7px; */
 }
 
-.swiper-slide:nth-child(12) img,
-.swiper-slide:last-child img{
-  transform: translateY(10px);
+@keyframes imgAnimation {
+  0% {
+    left: auto;
+    right: 0;
+  }
+  100% {
+    left: 0;
+    right: auto;
+  }
+}
+
+.img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: flex-end;
+  width: auto;
+  height: 130px;
+  animation: imgAnimation 5s linear infinite;
+}
+
+.img img {
+  height: 130px;
+}
+
+.img img:not(:last-child) {
+  margin-right: 35px;
+}
+
+marquee {
+  border-bottom: 4px solid;
+}
+
+marquee img {
+  height: 130px;
+  margin-bottom: -15px;
+}
+
+marquee img:not(:last-child) {
+  margin-left: 35px;
 }
 
 </style>
