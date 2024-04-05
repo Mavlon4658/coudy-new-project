@@ -30,6 +30,10 @@ export default {
   data () {
     return {
       swp: false,
+      xxlarge: true,
+      desktop: true,
+      mobile: true,
+      small: true,
     }
   },
   mounted() {
@@ -38,13 +42,122 @@ export default {
     //     clearInterval(stclr);
     //   }
     // }, 10);
+    let xxl = this.xxlarge, 
+        dk = this.desktop, 
+        mb = this.mobile,
+        sm = this.small;
+    let clrInterval, clrSettimeout;
 
-    setTimeout(() => {
-      this.imgTransform();
-      setInterval(() => {
+    let makeFncSm = () => {
+      clearTimeout(clrSettimeout);
+      clearInterval(clrInterval);
+      clrSettimeout = setTimeout(() => {
         this.imgTransform();
-      }, 7000);
-    }, 1500);
+        clrInterval = setInterval(() => {
+          this.imgTransform();
+        }, 13000);
+      }, 1500);
+    }
+
+    let makeFnc = () => {
+      clearTimeout(clrSettimeout);
+      clearInterval(clrInterval);
+      clrSettimeout = setTimeout(() => {
+        this.imgTransform();
+        clrInterval = setInterval(() => {
+          this.imgTransform();
+        }, 7000);
+      }, 1500);
+    }
+
+    let makeFncXl = () => {
+      clearTimeout(clrSettimeout);
+      clearInterval(clrInterval);
+      clrSettimeout = setTimeout(() => {
+        this.imgTransform();
+        clrInterval = setInterval(() => {
+          this.imgTransform();
+        }, 4000);
+      }, 1500);
+    }
+
+    let makeFncXXl = () => {
+      clearTimeout(clrSettimeout);
+      clearInterval(clrInterval);
+      console.log('1750 ishladi');
+      clrSettimeout = setTimeout(() => {
+        this.imgTransform();
+        clrInterval = setInterval(() => {
+          this.imgTransform();
+        }, 1500);
+      }, 1500);
+    }
+
+    let changeXXlarge = () => {
+      xxl = false;
+      dk = true;
+      mb = true;
+      sm = true;
+    }
+
+    let changeDesktop = () => {
+      xxl = true;
+      dk = false;
+      mb = true;
+      sm = true;
+    }
+
+    let changeMobile = () => {
+      xxl = true;
+      dk = true;
+      mb = false;
+      sm = true;
+    }
+
+    let changeMobileSm = () => {
+      xxl = true;
+      dk = true;
+      mb = true;
+      sm = false;
+    }
+
+    if (window.innerWidth > 1750) {
+      makeFncXXl();
+      changeXXlarge();
+    } else if (window.innerWidth > 1450) {
+      makeFncXl();
+      changeDesktop();
+    } else if (window.innerWidth > 992) {
+      makeFnc();
+      changeMobile();
+    } else {
+      makeFncSm();
+      changeMobileSm();
+    }
+
+    window.addEventListener('resize', function () {
+      if (this.window.innerWidth > 1750) {
+        if (xxl) {
+          makeFncXXl();
+          changeXXlarge();
+        }
+      } else if (this.window.innerWidth > 1450) {
+        if (dk) {
+          makeFncXl();
+          changeDesktop();
+        }
+      } else if (this.window.innerWidth > 992) {
+        if (mb) {
+          makeFnc();
+          changeMobile();
+        }
+      } else {
+        if (sm) {
+          makeFncSm();
+          changeMobileSm();
+        }
+      }
+    })
   },
   methods: {
     async imgTransform () {
@@ -99,6 +212,24 @@ export default {
   height: 130px;
   transition: 7s linear all;
   /* animation: imgAnimation 5s linear infinite; */
+}
+
+@media only screen and (min-width: 1750px) {
+  .img {
+    transition: 1.5s linear all;
+  }
+}
+
+@media only screen and (min-width: 1450px) {
+  .img {
+    transition: 4s linear all;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .img {
+    transition: 13s linear all;
+  }
 }
 
 .img img {
