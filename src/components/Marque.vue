@@ -37,11 +37,6 @@ export default {
     }
   },
   mounted() {
-    // let stclr = setInterval(() => {
-    //   if (this.$refs.img.offsetWidth > 2000) {
-    //     clearInterval(stclr);
-    //   }
-    // }, 10);
     let xxl = this.xxlarge, 
         dk = this.desktop, 
         mb = this.mobile,
@@ -84,7 +79,6 @@ export default {
     let makeFncXXl = () => {
       clearTimeout(clrSettimeout);
       clearInterval(clrInterval);
-      console.log('1750 ishladi');
       clrSettimeout = setTimeout(() => {
         this.imgTransform();
         clrInterval = setInterval(() => {
@@ -164,7 +158,6 @@ export default {
       let containerWidth = await this.$refs.img_container.offsetWidth;
       let imgWidth = await this.$refs.img.offsetWidth;
       let trsX = await containerWidth - imgWidth;
-      // console.log(imgWidth);
       if (this.swp) {
         this.$refs.img.style.left = `0`;
       } else {

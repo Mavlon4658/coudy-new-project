@@ -125,7 +125,7 @@ export default {
     transform: rotateZ(0);
   }
 
-  30% , 50%{
+  40%{
     transform: rotateZ(-70deg);
   }
   70% , 90%{
@@ -141,7 +141,7 @@ export default {
     transform: rotateZ(0);
   }
 
-  70% , 50%{
+  60% {
     transform: rotateZ(-70deg);
   }
   30% , 10%{
@@ -159,10 +159,10 @@ export default {
   width: 60px;
 }
 .ducg.active{
-  animation: duckActive 1s linear 1;
+  animation: duckActive .8s linear 1;
 }
 .ducg.end-active{
-  animation: duckEndActive 1s linear 1;
+  animation: duckEndActive .8s linear 1;
 }
 
 
