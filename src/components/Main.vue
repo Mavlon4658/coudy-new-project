@@ -21,10 +21,10 @@
 
     <ul class="main_btn">
       <li>
-        <a href="#"><img class="og_img" src="@/assets/home/og.svg" alt="" /></a>
+        <a href="https://opensea.io/collection/cloudy-nowhere-friends"><img class="og_img" src="@/assets/home/og.svg" alt="" /></a>
       </li>
       <li>
-        <a href="#"
+        <a href="https://opensea.io/collection/cloudy-nowhere-custom"
           ><img class="cstm_img" src="@/assets/home/cstm.svg" alt=""
         /></a>
       </li>

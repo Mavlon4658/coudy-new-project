@@ -7,10 +7,10 @@
     </div>
     <ul>
       <li>
-        <a href="#"><img class="img1" src="@/assets/home/og.svg" alt="" /></a>
+        <a href="https://opensea.io/collection/cloudy-nowhere-friends"><img class="img1" src="@/assets/home/og.svg" alt="" /></a>
       </li>
       <li>
-        <a href="#"><img class="img2" src="@/assets/home/cstm.svg" alt="" /></a>
+        <a href="https://opensea.io/collection/cloudy-nowhere-custom"><img class="img2" src="@/assets/home/cstm.svg" alt="" /></a>
       </li>
     </ul>
 
