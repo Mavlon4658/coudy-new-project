@@ -4,7 +4,7 @@
     <div class="logo">
       <img src="@/assets/home/logo.svg" alt="" />
     </div>
-    <Link />,
+    <Link />
       <button @click="modal = true">
         <img src="@/assets/home/mint.svg" alt="">
       </button>

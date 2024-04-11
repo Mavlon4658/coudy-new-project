@@ -1,7 +1,7 @@
 <template>
   <div class="footer_container">
     <div class="footer_top">
-      <Link />,
+      <Link />
       <div class="footer_top_img">
         <img class="footer_top_join" src="@/assets/footer/jn.svg" alt="" />
         <img class="footer_top_go" src="@/assets/footer/lfg.svg" alt="" />

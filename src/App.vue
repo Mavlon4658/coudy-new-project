@@ -1,10 +1,10 @@
 <template>
-  <Home />,
-  <Home2 />,
-  <About />,
-  <Main />,
-  <Marque />,
-  <Footer />,
+  <Home />
+  <Home2 />
+  <About />
+  <Main />
+  <Marque />
+  <Footer />
 </template>
 
 <script>
